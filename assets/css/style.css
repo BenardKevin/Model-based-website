@@ -1,0 +1,103 @@
+:root {
+    --header-height: 8.6vh;
+}
+
+html {
+}
+
+body{
+    background-color: #F4F4F4;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+    border: solid #E2E2E2;
+    border-width: 1px;
+}
+header div {
+    padding: 0 1em 0 1em;
+}
+header #name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--header-height);
+    border-right: solid #E2E2E2;
+    border-width: 0.0625vw;
+}
+header #name p {
+    font-size: 0.625vw;
+    font-weight: bolder;
+    letter-spacing: 0.3vw;
+}
+header div.right {
+    padding: 0 !important;
+    position: absolute;
+    right: 0;
+}
+header div.right i {
+    padding: 3vh;
+    border-left: solid #E2E2E2;
+    border-width: 0.0625vw;
+    color: #AAAAAA;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--header-height);
+}
+nav a {
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+nav a div  {
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+    padding: 0.25vw 2vh;
+    font-size: 0.625vw;
+    letter-spacing: 0.25vw;
+    color: #7D7D7D;
+    border-right: solid #E2E2E2;
+    border-width: 0.0625vw;
+}
+nav a:hover {
+    background-color: #e4e4e4;
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 33% auto;
+    grid-template-areas: "right left";
+}
+main .two {
+    grid-area: right;
+    margin: 3em 2em 0 6em;
+}
+main .three {
+    grid-area: left;
+    margin: 3em 7em 0em 0em;
+}
+main .three .post {
+    background-color: #FFF;
+    border: solid #E2E2E2;
+    border-width: 0.0625vw;
+    height: 10vh;
+    width: auto;
+    margin-bottom: 1em;
+}
+/* Footer */
+footer {
+
+}
