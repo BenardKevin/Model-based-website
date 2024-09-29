@@ -1,5 +1,7 @@
 :root {
     --header-height: 8.6vh;
+    --text-color-soft: #7D7D7D;
+    --post-default-padding: 2em;
 }
 
 html {
@@ -8,6 +10,8 @@ html {
 body{
     background-color: #F4F4F4;
     margin: 0;
+    
+    letter-spacing: 0.175vw;
 }
 
 /* Header */
@@ -35,17 +39,6 @@ header #name p {
     font-weight: bolder;
     letter-spacing: 0.3vw;
 }
-header div.right {
-    padding: 0 !important;
-    position: absolute;
-    right: 0;
-}
-header div.right i {
-    padding: 3vh;
-    border-left: solid #E2E2E2;
-    border-width: 0.0625vw;
-    color: #AAAAAA;
-}
 
 /* Nav */
 nav {
@@ -66,38 +59,234 @@ nav a div  {
     padding: 0.25vw 2vh;
     font-size: 0.625vw;
     letter-spacing: 0.25vw;
-    color: #7D7D7D;
+    color: var(--text-color-soft);
     border-right: solid #E2E2E2;
     border-width: 0.0625vw;
 }
 nav a:hover {
     background-color: #e4e4e4;
 }
+/* ICON */
+header div.right {
+    padding: 0 !important;
+    position: absolute;
+    right: 0;
+}
+header div.right i {
+    padding: 3vh;
+    border-left: solid #E2E2E2;
+    border-width: 0.0625vw;
+    color: #AAAAAA;
+}
 
-/* Main */
+
+/***************** main *********************/
 main {
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 33% auto;
-    grid-template-areas: "right left";
+    grid-template-areas: "left right";
 }
-main .two {
-    grid-area: right;
+main .main-left {
+    grid-area: left;
     margin: 3em 2em 0 6em;
 }
-main .three {
-    grid-area: left;
+main .main-right {
+    grid-area: right;
     margin: 3em 7em 0em 0em;
 }
-main .three .post {
+
+/***************** sidebar *********************/
+.hexagon {
+    height: 4em;
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+  }
+#presentation h1 {
+    font-weight: 600;
+    font-family: 'Raleway';
+    font-size: 5vh;
+    line-height: 7vh;
+    letter-spacing: 0.3vw;
+    padding: 1em 0;
+    color: #3C3B3B;
+}
+#presentation p {
+    color: var(--text-color-soft);
+    font-size: 0.75vw;
+    letter-spacing: 0.2vw;
+    margin-bottom: 4em;
+    line-height: 4vh;
+}
+/*  */
+#small-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 1em;
+    border-top: solid 1px rgba(160, 160, 160, 0.3);
+    border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+}
+#small-posts .small-post {
+    background-color: #FFF;
+    border: solid 1px rgba(160, 160, 160, 0.3);
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#small-posts .small-post section {
+    display: block;
+}
+#small-posts .small-post section img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+#small-posts .small-post header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+}
+#small-posts .small-post header div {
+    padding: 0;
+}
+#small-posts .small-post header div h1 {
+    font-size: 0.8vw;
+    font-weight: bolder;
+    padding-bottom: 1em;
+    font-family: 'Raleway';
+}
+#small-posts .small-post header div p {
+    font-size: 0.5vw;
+    color: var(--text-color-soft);
+    font-family: 'Raleway';
+}
+#small-posts .small-post header img {
+    width: 8%;
+    height: 4vh;
+    border-radius : 16em;
+}
+
+/***************** post *********************/
+main .main-right .post {
     background-color: #FFF;
     border: solid #E2E2E2;
     border-width: 0.0625vw;
-    height: 10vh;
+    height: auto;
     width: auto;
     margin-bottom: 1em;
+    display: grid;
+    grid-template-rows: 22% auto 15%;
+    grid-template-columns: 67% auto;
+    grid-template-areas: 
+        "title user"
+        "content content"
+        "button reaction";
+}
+
+main .main-right .post p {
+    color: var(--text-color-soft);
+    font-size: 0.75vw;
+    letter-spacing: 0.2vw;
+}
+
+/***************** post-title *********************/
+main .main-right .post .post-title {
+    grid-area: title;
+    font-size: 1.5vw;
+    letter-spacing: 0.3vw;
+    padding: var(--post-default-padding);
+    border-right: solid #E2E2E2;
+    border-width: 0.0625vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+main .main-right .post .post-title h1 {
+    font-weight: 1000;
+    font-family: 'Raleway';
+
+}
+main .main-right .post .post-title p {
+    margin-top: 2em;
+}
+
+/***************** post-user *********************/
+main .main-right .post .post-user {
+    grid-area: user;
+    display: flex;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    letter-spacing: 0.3vw;
+    padding: var(--post-default-padding);
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+}
+main .main-right .post .post-user h3 {
+    font-size: 0.6vw;
+}
+main .main-right .post .post-user div {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+main .main-right .post .post-user div p {
+    margin: 1em;
+}
+main .main-right .post .post-user div img {
+    width: 22%;
+    height: 5vh;
+    border-radius : 16em;
+}
+/***************** post-content *********************/
+main .main-right .post .post-content {
+    grid-area: content;
+    font-size: 1.5vw;
+    letter-spacing: 0.3vw;
+    padding: 2em 2em 0 2em;
+    border-top: solid #E2E2E2;
+    border-width: 0.0625vw;
+}
+main .main-right .post .post-content img {
+    width: 100%;
+}
+main .main-right .post .post-content p {
+    margin-top: 4em;
+}
+/***************** post-button *********************/
+main .main-right .post .post-button {
+    grid-area: button;
+    font-weight: bolder;
+    letter-spacing: 0.3vw;
+    padding: var(--post-default-padding);
+}
+main .main-right .post .post-button div {
+    display: inline-block;
+    border: solid #E2E2E2;
+    border-width: 1px;
+    padding: 1em;
+    &:hover() {
+        background-color: #AAAAAA;
+    }
+}
+main .main-right .post .post-button div:hover {
+    background-color: #E2E2E2;
+}
+main .main-right .post .post-button div p{
+    font-weight: bolder;
+}
+/***************** post-reaction *********************/
+main .main-right .post .post-reaction {
+    grid-area: reaction;
+    letter-spacing: 0.3vw;
+    padding: var(--post-default-padding);
 }
 /* Footer */
 footer {
-
 }
