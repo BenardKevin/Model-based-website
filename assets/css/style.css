@@ -118,7 +118,7 @@ main .main-right {
     margin-bottom: 4em;
     line-height: 4vh;
 }
-/*  */
+/* small-posts */
 #small-posts {
     display: flex;
     flex-wrap: wrap;
@@ -169,12 +169,81 @@ main .main-right {
     height: 4vh;
     border-radius : 16em;
 }
+/* smallest-posts */
+#smallest-posts .smallest-post {
+    display: flex;
+    padding: 1em 0;
+    align-items: center;
+    border-bottom: solid 0.0625vw #E2E2E2;
+}
+#smallest-posts .smallest-post img {
+    width: 15%;
+    height: 8vh;
+    margin-right: 1em;
+}
+#smallest-posts .smallest-post div {
+    padding: 0;
+}
+#smallest-posts .smallest-post div h1 {
+    font-size: 0.8vw;
+    font-weight: bolder;
+    padding-bottom: 1em;
+    font-family: 'Raleway';
+}
+#smallest-posts .smallest-post div p { 
+    font-size: 0.5vw;
+    color: var(--text-color-soft);
+    font-family: 'Raleway';
+}
+#about {
+    border-bottom: solid 0.0625vw #E2E2E2;
+}
+#about h1 {
+    font-size: 1.5vw;
+    font-weight: bolder;
+    padding: 1em 0;
+    font-family: 'Raleway';}
+#about p {
+    padding-bottom: 2em;
+    font-size: 0.75vw;
+    color: var(--text-color-soft);
+    font-family: 'Raleway';
+    letter-spacing: 0;
+    line-height: 1.5vw;
+}
+#about .button {
+    font-size: 0.5em;
+    font-weight: bolder;
+    padding: 2em;
+    margin-bottom: 5em;
+}
+footer .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+footer .icons li {
+    margin: 0 .5em;
+    min-width: 20px;
+    list-style-type: none;
+}
+footer .icons li a {
+    opacity: 0.6;
+    border: none;
+    text-decoration: none;
+    margin: 3em 0;
+    color: var(--text-color-soft);
+}
+footer p {
+    font-size: 0.375vw;
+    color: var(--text-color-soft);
+    font-family: 'Raleway';    
+}
 
 /***************** post *********************/
 main .main-right .post {
     background-color: #FFF;
-    border: solid #E2E2E2;
-    border-width: 0.0625vw;
+    border: solid 0.0625vw #E2E2E2;
     height: auto;
     width: auto;
     margin-bottom: 1em;
@@ -266,6 +335,7 @@ main .main-right .post .post-button {
     letter-spacing: 0.3vw;
     padding: var(--post-default-padding);
 }
+.button,
 main .main-right .post .post-button div {
     display: inline-block;
     border: solid #E2E2E2;
