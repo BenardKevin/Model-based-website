@@ -149,7 +149,7 @@ main .main-right {
 #small-posts .small-post header div {
     padding: 0;
 }
-#small-posts .small-post header div h1 {
+#small-posts .small-post header div h2 {
     font-size: .8vw;
     font-weight: bolder;
     padding-bottom: 1em;
@@ -178,7 +178,7 @@ main .main-right {
 #smallest-posts .smallest-post div {
     padding: 0;
 }
-#smallest-posts .smallest-post div h1 {
+#smallest-posts .smallest-post div h2 {
     font-size: .8vw;
     font-weight: bolder;
     padding-bottom: 1em;
@@ -190,7 +190,7 @@ main .main-right {
 #about {
     border-bottom: var(--nice-border);
 }
-#about h1 {
+#about h2 {
     font-size: 1.5vw;
     font-weight: bolder;
     padding: 1em 0;
@@ -262,7 +262,7 @@ main .main-right .post .post-title {
     align-items: flex-start;
     justify-content: center;
 }
-main .main-right .post .post-title h1 {
+main .main-right .post .post-title h2 {
     font-weight: 1000;
 
 }
@@ -315,19 +315,19 @@ main .main-right .post .post-content p {
 }
 /***************** post-button *********************/
 
-main .main-right .post #post-button {
+main .main-right .post .post-button {
     grid-area: button;
 }
-main .main-right .post #post-button div {
+main .main-right .post .post-button div {
     display: inline-block;
     border: var(--nice-border);
     padding: 1em;
     margin: 1.3em 0 0 2.4em;
 }
-main .main-right .post #post-button div:hover {
+main .main-right .post .post-button div:hover {
     background-color: #E2E2E2;
 }
-main .main-right .post #post-button div p{
+main .main-right .post .post-button div p{
     font-weight: bolder;
 }
 /***************** post-reaction *********************/
