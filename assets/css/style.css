@@ -2,16 +2,18 @@
     --header-height: 8.6vh;
     --text-color-soft: #7D7D7D;
     --post-default-padding: 2em;
+    --nice-border: solid .0625vw #E2E2E2;
 }
 
 html {
+    font-family: 'Raleway';
 }
 
 body{
     background-color: #F4F4F4;
     margin: 0;
     
-    letter-spacing: 0.175vw;
+    letter-spacing: .175vw;
 }
 
 /* Header */
@@ -20,8 +22,7 @@ header {
     display: flex;
     align-items: center;
     height: var(--header-height);
-    border: solid #E2E2E2;
-    border-width: 1px;
+    border: var(--nice-border);
 }
 header div {
     padding: 0 1em 0 1em;
@@ -31,21 +32,17 @@ header #name {
     justify-content: center;
     align-items: center;
     height: var(--header-height);
-    border-right: solid #E2E2E2;
-    border-width: 0.0625vw;
+    border-right: var(--nice-border);
 }
 header #name p {
-    font-size: 0.625vw;
+    font-size: .625vw;
     font-weight: bolder;
-    letter-spacing: 0.3vw;
+    letter-spacing: .3vw;
 }
 
 /* Nav */
 nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: var(--header-height);
 }
 nav a {
     text-decoration: none;
@@ -55,15 +52,17 @@ nav a div  {
     justify-content: center;
     align-items: center;
     margin: 0 !important;
-    padding: 0.25vw 2vh;
-    font-size: 0.625vw;
-    letter-spacing: 0.25vw;
+    padding: .25vw 2vh;
+    font-size: .625vw;
+    letter-spacing: .25vw;
     color: var(--text-color-soft);
-    border-right: solid #E2E2E2;
-    border-width: 0.0625vw;
+    border-right: var(--nice-border);
 }
 nav a:hover {
     background-color: #e4e4e4;
+}
+nav a:last-child div{
+    border: none;
 }
 /* ICON */
 header div.right {
@@ -72,9 +71,8 @@ header div.right {
     right: 0;
 }
 header div.right i {
-    padding: 3vh;
-    border-left: solid #E2E2E2;
-    border-width: 0.0625vw;
+    padding: 3vh 1.3vw;
+    border-left: var(--nice-border);
     color: #AAAAAA;
 }
 
@@ -103,17 +101,16 @@ main .main-right {
 }
 #presentation h1 {
     font-weight: 600;
-    font-family: 'Raleway';
     font-size: 5vh;
     line-height: 7vh;
-    letter-spacing: 0.3vw;
+    letter-spacing: .3vw;
     padding: 1em 0;
     color: #3C3B3B;
 }
 #presentation p {
     color: var(--text-color-soft);
-    font-size: 0.75vw;
-    letter-spacing: 0.2vw;
+    font-size: .75vw;
+    letter-spacing: .2vw;
     margin-bottom: 4em;
     line-height: 4vh;
 }
@@ -121,14 +118,14 @@ main .main-right {
 #small-posts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 1em;
-    border-top: solid 1px rgba(160, 160, 160, 0.3);
-    border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+    border-top: solid .0625vw rgba(160, 160, 160, .3);
+    border-bottom: solid .0625vw rgba(160, 160, 160, .3);
 }
 #small-posts .small-post {
     background-color: #FFF;
-    border: solid 1px rgba(160, 160, 160, 0.3);
+    border: solid .0625vw rgba(160, 160, 160, .3);
     display: flex;
     flex-direction: column;
     margin-top: 1em;
@@ -140,7 +137,7 @@ main .main-right {
 #small-posts .small-post section img {
     display: block;
     height: 100%;
-    width: 100%;
+    width: 24vw;
 }
 #small-posts .small-post header {
     display: flex;
@@ -153,15 +150,13 @@ main .main-right {
     padding: 0;
 }
 #small-posts .small-post header div h1 {
-    font-size: 0.8vw;
+    font-size: .8vw;
     font-weight: bolder;
     padding-bottom: 1em;
-    font-family: 'Raleway';
 }
 #small-posts .small-post header div p {
-    font-size: 0.5vw;
+    font-size: .5vw;
     color: var(--text-color-soft);
-    font-family: 'Raleway';
 }
 #small-posts .small-post header img {
     width: 8%;
@@ -173,7 +168,7 @@ main .main-right {
     display: flex;
     padding: 1em 0;
     align-items: center;
-    border-bottom: solid 0.0625vw #E2E2E2;
+    border-bottom: var(--nice-border);
 }
 #smallest-posts .smallest-post img {
     width: 15%;
@@ -184,34 +179,31 @@ main .main-right {
     padding: 0;
 }
 #smallest-posts .smallest-post div h1 {
-    font-size: 0.8vw;
+    font-size: .8vw;
     font-weight: bolder;
     padding-bottom: 1em;
-    font-family: 'Raleway';
 }
 #smallest-posts .smallest-post div p { 
-    font-size: 0.5vw;
+    font-size: .5vw;
     color: var(--text-color-soft);
-    font-family: 'Raleway';
 }
 #about {
-    border-bottom: solid 0.0625vw #E2E2E2;
+    border-bottom: var(--nice-border);
 }
 #about h1 {
     font-size: 1.5vw;
     font-weight: bolder;
     padding: 1em 0;
-    font-family: 'Raleway';}
+}
 #about p {
     padding-bottom: 2em;
-    font-size: 0.75vw;
+    font-size: .75vw;
     color: var(--text-color-soft);
-    font-family: 'Raleway';
     letter-spacing: 0;
     line-height: 1.5vw;
 }
 #about .button {
-    font-size: 0.5em;
+    font-size: .5em;
     font-weight: bolder;
     padding: 2em;
     margin-bottom: 5em;
@@ -223,31 +215,28 @@ footer .icons {
 }
 footer .icons li {
     margin: 0 .5em;
-    min-width: 20px;
+    width: 1.25vw;
     list-style-type: none;
 }
 footer .icons li a {
-    opacity: 0.6;
+    opacity: .6;
     border: none;
     text-decoration: none;
     margin: 3em 0;
     color: var(--text-color-soft);
 }
 footer p {
-    font-size: 0.375vw;
+    font-size: .375vw;
     color: var(--text-color-soft);
-    font-family: 'Raleway';    
 }
 
 /***************** post *********************/
 main .main-right .post {
     background-color: #FFF;
-    border: solid 0.0625vw #E2E2E2;
-    height: auto;
-    width: auto;
+    border: var(--nice-border);
     margin-bottom: 1em;
     display: grid;
-    grid-template-rows: 22% auto 15%;
+    grid-template-rows: 20% auto 15%;
     grid-template-columns: 67% auto;
     grid-template-areas: 
         "title user"
@@ -257,18 +246,17 @@ main .main-right .post {
 
 main .main-right .post p {
     color: var(--text-color-soft);
-    font-size: 0.75vw;
-    letter-spacing: 0.2vw;
+    font-size: .75vw;
+    letter-spacing: .2vw;
 }
 
 /***************** post-title *********************/
 main .main-right .post .post-title {
     grid-area: title;
     font-size: 1.5vw;
-    letter-spacing: 0.3vw;
+    letter-spacing: .3vw;
     padding: var(--post-default-padding);
-    border-right: solid #E2E2E2;
-    border-width: 0.0625vw;
+    border-right: var(--nice-border);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -276,7 +264,6 @@ main .main-right .post .post-title {
 }
 main .main-right .post .post-title h1 {
     font-weight: 1000;
-    font-family: 'Raleway';
 
 }
 main .main-right .post .post-title p {
@@ -289,14 +276,14 @@ main .main-right .post .post-user {
     display: flex;
     font-size: 1.5vw;
     font-weight: bolder;
-    letter-spacing: 0.3vw;
+    letter-spacing: .3vw;
     padding: var(--post-default-padding);
     align-items: flex-end;
     flex-direction: column;
     justify-content: center;
 }
 main .main-right .post .post-user h3 {
-    font-size: 0.6vw;
+    font-size: .6vw;
 }
 main .main-right .post .post-user div {
     margin-top: 1em;
@@ -316,49 +303,53 @@ main .main-right .post .post-user div img {
 main .main-right .post .post-content {
     grid-area: content;
     font-size: 1.5vw;
-    letter-spacing: 0.3vw;
+    letter-spacing: .3vw;
     padding: 2em 2em 0 2em;
-    border-top: solid #E2E2E2;
-    border-width: 0.0625vw;
+    border-top: var(--nice-border);
 }
 main .main-right .post .post-content img {
-    width: 100%;
+    width: 52.5vw;
 }
 main .main-right .post .post-content p {
     margin-top: 4em;
 }
 /***************** post-button *********************/
 
-main .main-right .post .post-button {
+main .main-right .post #post-button {
     grid-area: button;
-    font-weight: bolder;
-    letter-spacing: 0.3vw;
-    padding: var(--post-default-padding);
 }
-main .main-right .post .post-button div {
+main .main-right .post #post-button div {
     display: inline-block;
-    border: solid #E2E2E2;
-    border-width: 1px;
+    border: var(--nice-border);
     padding: 1em;
+    margin: 1.3em 0 0 2.4em;
 }
-main .main-right .post .post-button div:hover {
+main .main-right .post #post-button div:hover {
     background-color: #E2E2E2;
 }
-main .main-right .post .post-button div p{
+main .main-right .post #post-button div p{
     font-weight: bolder;
 }
 /***************** post-reaction *********************/
 main .main-right .post .post-reaction {
     grid-area: reaction;
-    letter-spacing: 0.3vw;
+    letter-spacing: .3vw;
     padding: var(--post-default-padding);
+    display: flex;
 }
-
+main .main-right .post .post-reaction p {
+    padding: 0 1em;
+    align-content: center;
+    border-right: var(--nice-border);
+}
+main .main-right .post .post-reaction p:last-child {
+    border: none;
+}
+/* Button */
 .button  {
     margin: 1em .5em 5em 0;
     display: inline-block;
-    border: solid #E2E2E2;
-    border-width: 1px;
+    border: var(--nice-border);
     padding: 1em;
 }
 .button:hover {
@@ -367,13 +358,55 @@ main .main-right .post .post-reaction {
 .button p{
     font-weight: bolder;
     color: var(--text-color-soft);
-    font-size: 0.75vw;
-    letter-spacing: 0.2vw;
-    font-family: 'Raleway';
-    &:not-first-child({}
-        color: #E2E2E2;
-    )
+    font-size: .75vw;
+    letter-spacing: .2vw;
 }
 #previous-button p{
     color: #E2E2E2;
+}
+/* Font ico (Font-Awesome) */
+.elastic-fai-xl{
+    font-size:80px;
+}
+.elastic-fai-lg{
+    font-size:50px;
+}
+.elastic-fai-md{
+    font-size:40px;
+}
+.elastic-fai-sm{
+    font-size:30px;
+}
+.elastic-fai-xs{
+    font-size:20px;
+}
+/* Extra small devices */
+@media(max-width:544px){
+    .elastic-fai-group > .elastic-fai, .elastic-fai-xs{
+        font-size:20px;
+    }
+}
+/* Small devices */
+@media(min-width:544px){
+    .elastic-fai-group > .elastic-fai, .elastic-fai-sm{
+        font-size:30px;
+    }
+}
+/* Medium devices */
+@media(min-width:768px){
+    .elastic-fai-group > .elastic-fai, .elastic-fai-md{
+        font-size:40px;
+    }
+}
+/* Large devices */
+@media(min-width:992px){
+    .elastic-fai-group > .elastic-fai, .elastic-fai-lg{
+        font-size:50px;
+    }
+}
+/* Exrta Large devices */
+@media(min-width:1200px){
+    .elastic-fai-group > .elastic-fai, .elastic-fai-xl{
+        font-size:80px;
+    }
 }
