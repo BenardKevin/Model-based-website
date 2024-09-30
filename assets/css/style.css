@@ -49,8 +49,7 @@ nav {
 }
 nav a {
     text-decoration: none;
-    justify-content: center;
-    align-items: center;
+    padding: 3.2vh 0;
 }
 nav a div  {
     justify-content: center;
@@ -101,7 +100,7 @@ main .main-right {
     height: 4em;
     aspect-ratio: cos(30deg);
     clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
-  }
+}
 #presentation h1 {
     font-weight: 600;
     font-family: 'Raleway';
@@ -166,7 +165,7 @@ main .main-right {
 }
 #small-posts .small-post header img {
     width: 8%;
-    height: 4vh;
+    height: 3.4vh;
     border-radius : 16em;
 }
 /* smallest-posts */
@@ -329,21 +328,18 @@ main .main-right .post .post-content p {
     margin-top: 4em;
 }
 /***************** post-button *********************/
+
 main .main-right .post .post-button {
     grid-area: button;
     font-weight: bolder;
     letter-spacing: 0.3vw;
     padding: var(--post-default-padding);
 }
-.button,
 main .main-right .post .post-button div {
     display: inline-block;
     border: solid #E2E2E2;
     border-width: 1px;
     padding: 1em;
-    &:hover() {
-        background-color: #AAAAAA;
-    }
 }
 main .main-right .post .post-button div:hover {
     background-color: #E2E2E2;
@@ -357,6 +353,27 @@ main .main-right .post .post-reaction {
     letter-spacing: 0.3vw;
     padding: var(--post-default-padding);
 }
-/* Footer */
-footer {
+
+.button  {
+    margin: 1em .5em 5em 0;
+    display: inline-block;
+    border: solid #E2E2E2;
+    border-width: 1px;
+    padding: 1em;
+}
+.button:hover {
+    background-color: #E2E2E2;
+}
+.button p{
+    font-weight: bolder;
+    color: var(--text-color-soft);
+    font-size: 0.75vw;
+    letter-spacing: 0.2vw;
+    font-family: 'Raleway';
+    &:not-first-child({}
+        color: #E2E2E2;
+    )
+}
+#previous-button p{
+    color: #E2E2E2;
 }
